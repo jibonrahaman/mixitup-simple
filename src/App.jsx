@@ -2,7 +2,9 @@ import { useState } from "react"
 import datas from "./data"
 function App() {
  const [showCar,setShowCar]=useState(datas)
+
 const [task,setTask]=useState([])
+
   const handleCar=(name)=>{
     // console.log(name);
    const filterdata= showCar.filter((item)=>{
@@ -20,8 +22,9 @@ const [task,setTask]=useState([])
        <h2 className="bg-yellow-500 px-6 rounded-lg py-1 text-white hover:bg-yellow-700 duration-500" onClick={()=>handleCar("Yellow")}>Yellow</h2>
       </div>
 
-     <div className=" flex flex-wrap gap-x-9 ml-20 mt-8">
-    {
+
+      <div className=" flex flex-wrap gap-x-9 ml-20 mt-8">
+    { task.length>0 
       showCar.map((item,index)=>{
         const {img,price}=item
        return <div key={index} className="w-[300px] my-4">
@@ -34,6 +37,7 @@ const [task,setTask]=useState([])
     }
  
       </div>
+  
     
       </section>     
     </>
