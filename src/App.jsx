@@ -2,13 +2,13 @@ import { useState } from "react"
 import datas from "./data"
 function App() {
  const [showCar,setShowCar]=useState(datas)
-
+const [task,setTask]=useState([])
   const handleCar=(name)=>{
     // console.log(name);
    const filterdata= showCar.filter((item)=>{
       return item.colour==name
     })
-    setShowCar(filterdata)
+    setTask(filterdata)
   }
   return (
     <>
