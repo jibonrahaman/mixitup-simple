@@ -1,14 +1,14 @@
 import { useState } from "react"
-import b1 from "./assets/b1.jpg"
 import datas from "./data"
 function App() {
  const [showCar,setShowCar]=useState(datas)
 
   const handleCar=(name)=>{
     // console.log(name);
-    showCar.filter((item)=>{
-      console.log(item.colour);
+   const filterdata= showCar.filter((item)=>{
+      return item.colour==name
     })
+    setShowCar(filterdata)
   }
   return (
     <>
@@ -21,13 +21,17 @@ function App() {
       </div>
 
      <div className=" flex flex-wrap gap-x-9 ml-20 mt-8">
-     <div className="w-[300px] my-4">
-   <img src={b1} alt={b1} className=""/>
-   <div className=" flex justify-between">
-   <p>Colour: Blue</p>
-   <p>Price:2Core</p>
-   </div>
-      </div> 
+    {
+      showCar.map((item,index)=>{
+        const {img,price}=item
+       return <div key={index} className="w-[300px] my-4">
+        <img src={img} alt={img} className=" w-full h-[200px]"/>
+        <div className=" flex justify-between">
+        {/* <p>Colour: {colour}</p> */}
+        <p>Price:{price}</p>
+        </div>
+           </div>       })
+    }
  
       </div>
     
