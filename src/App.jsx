@@ -20,7 +20,7 @@ const [task,setTask]=useState([])
        <h2 className="bg-black px-6 rounded-lg py-1 text-white hover:bg-[#434141] duration-500" onClick={()=>handleCar("Black")}>Black</h2>
        <h2 className="bg-blue-500 px-6 rounded-lg py-1 text-white hover:bg-blue-700 duration-500" onClick={()=>handleCar("Blue")}>Blue</h2>
        <h2 className="bg-yellow-500 px-6 rounded-lg py-1 text-white hover:bg-yellow-700 duration-500" onClick={()=>handleCar("Yellow")}>Yellow</h2>
-        <h2 className="bg-yellow-500 px-6 rounded-lg py-1 text-white hover:bg-yellow-700 duration-500" onClick={()=>handleCar("Yellow")}>Yellow</h2>
+        <h2 className="bg-yellow-500 px-6 rounded-lg py-1 text-white hover:bg-yellow-700 duration-500" onClick={()=>setTask(datas)}>All</h2>
       </div>
 
 
