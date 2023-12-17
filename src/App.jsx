@@ -28,22 +28,22 @@ const [task,setTask]=useState([])
     { task.length>0 ?
 
       task.map((item,index)=>{
-        const {img,price}=item
+        const {colour,img,price}=item
        return <div key={index} className="w-[300px] my-4">
         <img src={img} alt={img} className=" w-full h-[200px]"/>
         <div className=" flex justify-between">
-        {/* <p>Colour: {colour}</p> */}
+        <p>Colour: {colour}</p>
         <p>Price:{price}</p>
         </div>
            </div>       })
            :
 
            showCar.map((item,index)=>{
-            const {img,price}=item
+            const {colour,img,price}=item
            return <div key={index} className="w-[300px] my-4">
             <img src={img} alt={img} className=" w-full h-[200px]"/>
             <div className=" flex justify-between">
-            {/* <p>Colour: {colour}</p> */}
+            <p>Colour: {colour}</p>
             <p>Price:{price}</p>
             </div>
                </div>       })
