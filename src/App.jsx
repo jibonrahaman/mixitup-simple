@@ -13,17 +13,17 @@ function App() {
        <h2 className="bg-yellow-500 px-6 rounded-lg py-1 text-white hover:bg-yellow-700 duration-500">Yellow</h2>
       </div>
 
-     <div className=" flex flex-wrap">
-     <div className="w-[300px]">
-  <div>
-  <img src={b1} alt={b1} className=""/>
+     <div className=" flex flex-wrap gap-x-9 ml-20 mt-8">
+     <div className="w-[300px] my-4">
+   <img src={b1} alt={b1} className=""/>
    <div className=" flex justify-between">
    <p>Colour: Blue</p>
    <p>Price:2Core</p>
    </div>
-  </div>
+      </div> 
+ 
       </div>
-     </div>
+    
       </section>     
     </>
   )
