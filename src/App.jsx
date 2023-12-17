@@ -2,10 +2,13 @@ import { useState } from "react"
 import b1 from "./assets/b1.jpg"
 import datas from "./data"
 function App() {
- const [showCar,setshowCar]=useState([datas])
+ const [showCar,setShowCar]=useState(datas)
 
   const handleCar=(name)=>{
-    console.log(name);
+    // console.log(name);
+    showCar.filter((item)=>{
+      console.log(item.colour);
+    })
   }
   return (
     <>
